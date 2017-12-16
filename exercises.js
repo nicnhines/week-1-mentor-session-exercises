@@ -63,6 +63,16 @@
  * ie: 68 => 1:8
  */
 
+ var timeConvert = function(num) {
+ 	var hours= Math.floor(num / 60);
+ 	var minutes = num % 60;
+ 	if(typeof num === "number"){
+ 		return hours + ":" + minutes;
+ 	}else{
+ 		return null;
+ 	}
+ };
+
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
  * num times (second argument). Return an empty string if num is a negative number
@@ -72,6 +82,9 @@
  * i.e repeatString("money", 3) => "moneymoneymoney".
  */
 
+var repeatString = function(str, num){
+	
+};
 
 /**
  * Below here we see a module.exports which is set to an object with a bunch of keys.
@@ -91,6 +104,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 };
