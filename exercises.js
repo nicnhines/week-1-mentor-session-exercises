@@ -6,7 +6,12 @@
  * ie: "cat" => "tac"
  */
  var firstReverse = function(str) {
+ 	if(typeof str === 'string'){
  	return str.split('').reverse().join('');
+ 	
+ 	}else{
+ 		return null;
+ 	}
  };
 
  /** Function: alphaOrder
@@ -18,8 +23,11 @@
  */
 
  var alphaOrder = function(str) {
-
+ 	if (typeof str === 'string'){
  	return str.split('').sort().join('');
+ 	}else{
+ 		return null;
+ 	}
  };
 
  /** Function: vowelCount
@@ -29,6 +37,22 @@
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+
+ var vowelCount = function(str) {
+ 	var vowels = 'aeiouAEIOU';
+ 	var count = 0;
+ 	if(typeof str === 'string'){
+ 	for (var i = 0; i < str.length; i++) {
+ 		if(vowels.indexOf(str[i]) !== -1){
+ 			count += 1;
+ 		}
+ 		
+ 	} 
+ 	return count;
+ 	}else{
+ 	return null;
+ }
+ };
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -66,7 +90,7 @@
 module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
-    vowelCount: null,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 };
