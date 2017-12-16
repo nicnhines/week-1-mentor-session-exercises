@@ -17,6 +17,11 @@
  * ie: "cake" => "acek"
  */
 
+ var alphaOrder = function(str) {
+
+ 	return str.split('').sort().join('');
+ };
+
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
  * return the number of vowels in the string
@@ -60,7 +65,7 @@
 
 module.exports = {
     firstReverse: firstReverse,
-    alphaOrder: null,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
