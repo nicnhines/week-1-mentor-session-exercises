@@ -83,7 +83,16 @@
  */
 
 var repeatString = function(str, num){
-	
+	if(typeof str === "string" && typeof num === "number"){
+		if(num > 0){
+			return str.repeat(num);
+		}else{
+			return "";
+		}
+		
+	}else{
+		return null;
+	}
 };
 
 /**
@@ -105,5 +114,5 @@ module.exports = {
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
     timeConvert: timeConvert,
-    repeatString: null
+    repeatString: repeatString
 };
